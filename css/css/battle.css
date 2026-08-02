@@ -1,1 +1,93 @@
+/* Đấu trường */
 
+#arena{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+/* Người chơi */
+
+.player{
+    position:absolute;
+    bottom:80px;
+    left:120px;
+
+    width:140px;
+    height:220px;
+
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+
+    transition:0.12s;
+}
+
+/* Đồng đội AI */
+
+.ally{
+    position:absolute;
+    bottom:80px;
+    left:280px;
+
+    width:140px;
+    height:220px;
+
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+/* Boss */
+
+.enemy{
+    position:absolute;
+    bottom:80px;
+    right:120px;
+
+    width:140px;
+    height:220px;
+
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+/* Hiệu ứng đánh */
+
+.hit{
+    animation:hitFlash .15s;
+}
+
+@keyframes hitFlash{
+
+    0%{
+        filter:brightness(1);
+    }
+
+    50%{
+        filter:brightness(3);
+    }
+
+    100%{
+        filter:brightness(1);
+    }
+
+}
+
+/* Rung màn hình */
+
+.shake{
+    animation:shake .2s;
+}
+
+@keyframes shake{
+
+    0%{transform:translateX(0);}
+    25%{transform:translateX(-8px);}
+    50%{transform:translateX(8px);}
+    75%{transform:translateX(-5px);}
+    100%{transform:translateX(0);}
+
+}
